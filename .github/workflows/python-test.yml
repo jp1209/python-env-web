@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v3.12.1
+      uses: actions/setup-python@v3.2
       with:
         python-version: '3.8'
 
@@ -19,12 +19,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium
 
-    # Agregar paso para instalar GeckoDriver
-    - name: Install GeckoDriver
-      run: |
-        wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
-        tar -xvzf geckodriver-v0.30.0-linux64.tar.gz
-        sudo mv geckodriver /usr/local/bin/
 
     # Ejecutar el test
     - name: Run test
