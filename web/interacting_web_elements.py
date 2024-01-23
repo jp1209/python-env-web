@@ -5,6 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 driver = webdriver.Firefox()
+options = webdriver.FirefoxOptions()
+options.headless = True
 driver.maximize_window()
 try:
     wait = WebDriverWait(driver, 10)
