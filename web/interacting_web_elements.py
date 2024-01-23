@@ -2,9 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
+from selenium.webdriver.firefox.service import Service
 
-driver = webdriver.Firefox()
+# Especifica la ruta al geckodriver
+#service = Service(executable_path="../driver/geckodriver.exe")
+
+#driver = webdriver.Firefox(service=service)
+
+driver = webdriver.Chrome()
 driver.maximize_window()
 try:
     wait = WebDriverWait(driver, 10)
